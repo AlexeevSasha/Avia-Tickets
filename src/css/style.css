@@ -1,0 +1,45 @@
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header styles */
+.header .brand-logo {
+  position: static;
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+.header .select-wrapper {
+  width: 150px;
+}
+
+.header .select-wrapper input.select-dropdown {
+  margin: 0;
+  color: white;
+  border-bottom: none;
+  font-size: 18px;
+}
+
+.header .select-wrapper input.select-dropdown:focus {
+  border-bottom: none;
+}

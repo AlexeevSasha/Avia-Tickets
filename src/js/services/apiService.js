@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '../config/apiConfig';
+import config from '../config/apiConfig'
 
 
 
@@ -18,10 +18,8 @@ class Api {
     async countries() {
         try {
             const response = await axios.get(`${this.url}/countries`)
-            console.log(response);
             return response.data;
         } catch (error) {
-            console.log(error);
             return Promise.reject(error);
         }
     }
@@ -31,7 +29,6 @@ class Api {
             const response = await axios.get(`${this.url}/cities`)
             return response.data;
         } catch (error) {
-            console.log(error);
             return Promise.reject(error);
         }
     }

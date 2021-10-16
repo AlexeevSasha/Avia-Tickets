@@ -39,7 +39,3 @@
   border-bottom: none;
   font-size: 18px;
 }
-
-.header .select-wrapper input.select-dropdown:focus {
-  border-bottom: none;
-}

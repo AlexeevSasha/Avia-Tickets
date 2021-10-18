@@ -39,3 +39,7 @@
   border-bottom: none;
   font-size: 18px;
 }
+
+.select-wrapper .caret {
+  fill: white !important;
+}

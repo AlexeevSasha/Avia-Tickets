@@ -17,6 +17,23 @@ class FormUi {
         return this.$form;
     }
 
+    // значение this.origin
+    get originValue() {
+        return this.origin.value;
+    }
+    // значение this.destination
+    get destinationValue() {
+        return this.destination.value;
+    }
+    // значение departDatepicker
+    get departDateValue() {
+        return this.departDatepicker.toString();
+    }
+    // значение returnDatepicker
+    get returnDateValue() {
+        return this.returnDatepicker.toString();
+    }
+
     setAutocompleteData(data) {
         this.originAutocomplete.updateData(data);
         this.destinationAutocomplete.updateData(data);

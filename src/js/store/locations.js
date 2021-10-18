@@ -23,6 +23,10 @@ class Locations {
         return response;
     }
 
+    getCityCodeByKey(key) {
+        return this.cities[key].code;
+    }
+
 
     // [{}, {}] так выглядят наши данные с сервера
     // { 'City, Country', null } в таком формате получает данные наш     Autocomplete;
@@ -59,10 +63,9 @@ class Locations {
         return this.countries[code].name;
     }
 
-
-    //получение городов по коду страны
-    getCitiesByCountryCode(code) {
-        return this.cities.filter(city => city.country_code === code);
+    async fetchTickets (params) {
+        const response = await this.api.prices(params);
+        console.log(response);
     }
 }
 

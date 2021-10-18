@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // handler
   async function initApp() {
     await locations.init();
-    formUi.setAutocompleteData(locations.shortCitiesList)
+    formUi.setAutocompleteData(locations.shortCities)
   }
 
   //запрос на получение билетов

@@ -5,6 +5,7 @@ class Locations {
         this.api = api;
         this.countries = null;
         this.cities = null;
+        this.shortCitiesList = null;
     }
 
     //запрашивает города и страны
@@ -17,6 +18,7 @@ class Locations {
         const [countries, cities] = response;
         this.countries = this.serializeCountries(countries);
         this.cities = this.serializeCities(cities);
+        this.shortCitiesList = this.createShortCitiesList(this.cities);
 
         return response;
     }
@@ -24,6 +26,13 @@ class Locations {
 
     // [{}, {}] так выглядят наши данные с сервера
     // { 'City, Country', null } в таком формате получает данные наш     Autocomplete;
+    createShortCitiesList(cities) {
+        //Object.entries -> [key, value]
+        return Object.entries(cities).reduce((acc, [key]) => {
+              acc[key] = null;
+              return acc;
+        }, {})
+    }
 
     //преобразуем в формат { 'Country-code': {...} }
     serializeCountries(countries) {

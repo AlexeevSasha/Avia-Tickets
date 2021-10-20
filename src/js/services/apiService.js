@@ -4,7 +4,7 @@ import config from '../config/apiConfig'
 
 
 // class с набором методов для взаимодействия с нашим сервером
-class Api {
+export class Api {
     constructor(config) {
         this.url = config.url;
     }
